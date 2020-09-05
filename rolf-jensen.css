@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+    background: rgb(37, 37, 37);
+    color: rgb(212, 206, 206);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none;  /*Chrome, Safari and Opera */
+  }
+.page-name{
+    font-size: 1.3em;
+    text-align: center;
+    margin: 3em 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-img-firstPart{
+    width:0;
+    height:0;
+    border-bottom: 20px rgb(212, 206, 206) solid;
+    border-top: 20px rgb(212, 206, 206) solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    position: relative;
+    animation: rotation 5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotation{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.logo-img-firstPart::before{
+    content:"";
+    position: absolute;
+    top: -20px;
+    left: -3px;
+    width:0;
+    height:0;
+    border-bottom: 20px rgb(212, 206, 206) solid;
+    border-top: 20px rgb(212, 206, 206) solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    transform: rotate(45deg);
+}
+.logo-img-firstPart::after{
+    content:"";
+    position: absolute;
+    top: -20px;
+    left: -3px;
+    width:0;
+    height:0;
+    border-bottom: 20px rgb(212, 206, 206) solid;
+    border-top: 20px rgb(212, 206, 206) solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    transform: rotate(90deg);
+}
+.logo-img-finalPart{
+    width:0;
+    height:0;
+    border-bottom: 20px rgb(212, 206, 206) solid;
+    border-top: 20px rgb(212, 206, 206) solid;
+    border-left: 3px transparent solid;
+    border-right: 3px transparent solid;
+    position: absolute;
+    top: 95px;
+    animation: rotation1 5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotation1{
+    0% {transform: rotate(135deg);}
+    100% {transform: rotate(495deg);}
+}
+h1{
+    font-family: 'Rock Salt', cursive;
+    font-size: 6em;
+    margin: 0.7em 0;
+}
+#director-paragraph{
+    font-size: 1.5em;
+}
+#experience-paragraph{
+    font-size: 3em;
+    margin: 2.5em 1em;
+}
+#onsite-experience{
+    font-size: 0.9em;
+    font-style: italic;
+}
+#description-paragraph{
+    font-size: 1.58em;
+    margin: 0 1.9em;
+    line-height: 1.6em;
+}
+iframe{
+    width: 85vw;
+    height: 65vh;
+    margin: 3em 0;
+}
+#awards-paragraph{
+    font-size: 1.58em;
+    margin: 0 1.9em;
+    line-height: 1.6em;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:rgb(212, 206, 206);
+
+}
+#header-links{
+    display: none;
+}
+#footer-links ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.58em;
+    margin: 3em 1.9em 0em;
+}
+#gmail-link{
+    font-size: 1.58em;
+    text-align: center;
+    margin: 3em 0em;
+}
+@media screen and (min-width: 1000px){
+    #header-links{
+        display: inline-block;
+    }
+    header{
+        display: flex;
+        margin: 6em 6em 10em;
+    }
+    #header-links{
+        display: inline-block;
+
+    }
+    #header-links ul{
+        display: flex;
+        font-size: 1.5em;
+        position: absolute;
+        right: 0;
+    }
+    #header-links ul a{
+        margin:0 2em;
+    }
+    .page-name{
+        font-size: 1.3em;
+        text-align: left;
+        margin: 0 2em;
+    }
+    h1{
+        font-size: 30em;
+        margin: -0.3em 0em 0.1em;
+    }
+    .logo-img-finalPart{
+        top: 178px;
+    }
+    #experience-paragraph{
+        font-size: 5em;
+    }
+    #onsite-experience{
+        font-size: 0.9em;
+    }
+    #description-paragraph{
+        font-size: 2em;
+        line-height: 1.6em;
+        width: 35em;
+    }
+    iframe{
+        width: 70vw;
+        height: 65vh;
+        margin: 20em 0;
+    }
+    #awards-paragraph{
+        font-size: 2em;
+        margin: 0 31em;
+        line-height: 1.6em;
+    }
+    #footer-links ul{
+        font-size: 1.58em;
+        margin: 5em 45em 0em;
+    }
+    #gmail-link{
+        margin: 5em 0em;
+    }
+    .underline::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        margin: auto;
+        display: block;
+        background: white;
+        transition: 0.6s;
+      }
+    .underline:hover::after {
+        width: 2em;
+      }
+}
